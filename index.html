@@ -8,6 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/rippleEffect.css" type="text/css">
         <link rel="stylesheet" href="css/main.css" type="text/css">
+        <script src ="js/rippleJs.js" type="text/javascript"></script>
 
     </head>
     <body>
@@ -35,15 +36,16 @@
 
                 <p>Now here is what your buttons will look like with this framework:</p>
 
-                <button class ="RippleCircleButton rippleJs"  type="button" >+</button>
+                <button class ="RippleCircleButton"  type="button" id="ripple1">+</button>
                 <br>
-                <button class ="RippleFlat rippleJs" type="button" >Email me</button>
+                <button class ="RippleFlat" type="button" id="ripple2">Email me</button>
                 <br>
-                <button class ="RippleButton rippleJs" type="button" >this is a button</button>
+                <button class ="RippleButton" type="button" id="ripple3">this is a button</button>
 
                 <p>
                     Here is where I got inspiration and some of the code from.<br>
                     <a href ="https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_buttons_animate2">w3schools</a>
+                    Also my TA Stephen was a large source of help, so major shoutout to him.
                 </p>
             </div>
             <br>
@@ -54,7 +56,7 @@
                 <h1>How to use this for yourself:</h1>
 
                 <p>First and foremost, you need to download the zip files which includes the proper JavaScript and CSS files.</p>
-                <button class ='RippleButton4 rippleJs' type="button" onclick="window.open('rippleJS.zip')">Download</button><br>
+                <button id="ripple4" class ="RippleButton4" type="button" onclick="window.open('rippleJS.zip')" >Download</button><br>
 
                 <h2>Implementation</h2>
                 <p>To use this in your code, you should follow these steps:</p>
@@ -64,7 +66,7 @@
                         It is highly encouraged that you follow the Google button guideline for the best results. Do this in CSS. 
                         You should want your buttons to look something like this:
                         <div class="code">
-    <pre>
+                            <pre>
     .RippleButtonRed{
     position: relative;
     overflow: hidden;
@@ -78,7 +80,7 @@
     border-radius: 10px;
     box-shadow: 0 0 8px rgba(0,0,0, 0.3);
     }
-    </pre>
+                            </pre>
                         </div>
                     </li>
 
@@ -93,21 +95,33 @@
                     </li>
 
                     <li>Then, finally, you can implement the code onto your button. <b>Follow these steps exactly:</b><br>
-                        When you are creating your button object, you must define the class properly. This work in exactly one way.
-                        In your class, you must type the name of the class of button that you want, then followed by a space then followed by "rippleJs".
+                        Define the JavaScript file in the head of your HTML file. In your button tag, call the button with the styling that you want.
+                        Give it the type button, and give it a unique ID.
                         For Example:
                         <div class="code">
                             <pre>
-    &ltbutton class ="RippleCircleButton rippleJs"  type="button" &lt+&lt/button&lt
+    &ltbutton class ="RippleCircleButton"  type="button" id="ripple1"&lt+&lt/button&lt
                             </pre>
                         </div>
+                        Then, at the bottom of your body, call the function in a script tag. The first parameter defines which ID to apply it to.
+                        The second parameter defines the delay time. So, the lower number, the faster the effect will take place.
                         It's as simple as that!
+                        <div class="code">
+                            <pre>
+    &ltscript&lt Ripple("ripple1", 500); &lt/script&lt
+                            </pre>
+                        </div>
                     </li>
                 </ol>
 
             </div>
         </div>
-
-        <script src ="js/rippleJs.js" type="text/javascript"></script>
+        <script>
+            Ripple("ripple1");
+            Ripple("ripple2", 1000);
+            Ripple("ripple3",250);
+            Ripple("ripple4",250);
+        </script>
+        
     </body>
 </html>
