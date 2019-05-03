@@ -1,0 +1,264 @@
+/*Created by Matthew Arndt */
+
+body { 
+    font-family: Georgia;
+    background-color: #00133F;
+}
+h1{
+    font-family: Garamond;
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* Style the header with a grey background and some padding */
+.header {
+  overflow: hidden;
+  background-color: #f1f1f1;
+  padding: 20px 10px;
+}
+
+/* Style the header links */
+.header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+/* Change the background color on mouse-over */
+.header a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Float the link section to the right */
+.header-right {
+  float: right;
+}
+
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */ 
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .header-right {
+    float: none;
+  }
+}
+
+.mainsection{
+    background: #D0D1D1;
+    box-sizing: border-box;
+    text-align: left;
+    margin:16px auto 10px;
+    min-width: 300px;
+    max-width: 800px;
+    width: calc(100% - 16px);
+    transition: all .25s ease-in-out;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+}
+
+.code{
+    font-family: Consolas;
+    background: white;
+    text-align: left;
+    margin: 16px auto 10px;
+    width: calc(100% - 16px);
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+}
+
+.content{
+    padding:8px 16px;
+}
+
+.link{
+    color: #fa8c8c !important;
+    text-decoration: none;
+    float:right;
+    font-weight: bold;
+}
+.link:hover{
+    font-size: 1.2em;
+    transition: all .25s ease-in-out;
+
+}
+
+/*--------------------------REGULAR BUTTONS--------------------------- */
+
+.RippleButton{
+    position: relative;
+    overflow: hidden;
+    font-size: 24px;
+    padding: 1rem 2rem;
+    margin: 3px;
+    border: 0px;
+    outline: 0;
+    color: #fff;
+    background-color: teal;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0,0,0, 0.3);
+}
+.RippleButton2{
+    position: relative;
+    overflow: hidden;
+    font-size: 24px;
+    padding: 1rem 2rem;
+    margin: 3px;
+    border: 0px;
+    outline: 0;
+    color: #fff;
+    background-color: #005446;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0,0,0, 0.3);
+}
+.RippleButton3{
+    position: relative;
+    overflow: hidden;
+    font-size: 24px;
+    padding: 1rem 2rem;
+    margin: 3px;
+    border: 0px;
+    outline: 0;
+    color: #fff;
+    background-color: #4f58f2;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0,0,0, 0.3);
+}
+.RippleButton4{
+    position: relative;
+    overflow: hidden;
+    font-size: 24px;
+    padding: 1rem 2rem;
+    margin: 3px;
+    border: 0px;
+    outline: 0;
+    color: #fff;
+    background-color: #bfe84e;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0,0,0, 0.3);
+}
+
+
+/*--------------------------CIRCLE BUTTONS--------------------------- */
+
+.RippleCircleButton{
+    position: relative;
+    overflow: hidden;
+    font-size: 1.5rem;
+    height: 4rem;
+    width: 4rem;
+    margin: 3px;
+    border: 0px;
+    outline: 0;
+    color: #ffffff;
+    background-color: maroon;
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(0,0,0, 0.3);
+}
+.RippleCircleButton2{
+    position: relative;
+    overflow: hidden;
+    font-size: 1.5rem;
+    height: 4rem;
+    width: 4rem;
+    margin: 3px;
+    border: 0px;
+    outline: 0;
+    color: #ffffff;
+    background-color: #519160;
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(0,0,0, 0.3);
+}
+.RippleCircleButton3{
+    position: relative;
+    overflow: hidden;
+    font-size: 1.5rem;
+    height: 4rem;
+    width: 4rem;
+    margin: 3px;
+    border: 0px;
+    outline: 0;
+    color: #ffffff;
+    background-color: #a52643;
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(0,0,0, 0.3);
+}
+.RippleCircleButton4{
+    position: relative;
+    overflow: hidden;
+    font-size: 1.5rem;
+    height: 4rem;
+    width: 4rem;
+    margin: 3px;
+    border: 0px;
+    outline: 0;
+    color: #ffffff;
+    background-color: #6a8fc9;
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(0,0,0, 0.3);
+}
+
+/*--------------------------FLAT BUTTONS--------------------------- */
+.RippleFlat{
+    position: relative;
+    overflow: hidden;
+    font-size: 24px;
+    padding: 1rem 2rem;
+    margin: 3px;
+    border: 0px;
+    outline: 0;
+    color: #ffffff;
+    background-color: royalblue;
+}
+.RippleFlat2{
+    position: relative;
+    overflow: hidden;
+    font-size: 24px;
+    padding: 1rem 2rem;
+    margin: 3px;
+    border: 0px;
+    outline: 0;
+    color: #ffffff;
+    background-color: #9b5306;
+}
+.RippleFlat3{
+    position: relative;
+    overflow: hidden;
+    font-size: 24px;
+    padding: 1rem 2rem;
+    margin: 3px;
+    border: 0px;
+    outline: 0;
+    color: #081c07;
+    background-color: royalblue;
+}
+.RippleFlat4{
+    position: relative;
+    overflow: hidden;
+    font-size: 24px;
+    padding: 1rem 2rem;
+    margin: 3px;
+    border: 0px;
+    outline: 0;
+    color: #530077;
+    background-color: royalblue;
+}
+
+
+
